@@ -1,0 +1,39 @@
+:root {
+    --mywhite: #EEEDE9;
+    --myblack: #1a191a;
+    --myblue: #0a34a2;
+    --myred: #eb3f00;
+    --myyellow: #efddd1;   
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+@font-face {
+    font-family: Rosellinda;
+    src: url(../font/Rosellinda\ Alyamore.otf);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
