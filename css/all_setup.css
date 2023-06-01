@@ -37,3 +37,52 @@ h3 {
     font-weight: 400;
     line-height: 1.5rem;
 }
+
+
+/* nav */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--myyellow);
+    border-radius: 0.5rem;
+    padding: 8px 60px;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.menu ul,
+.icon {
+    display: flex;
+    justify-content: center;
+}
+
+.menu_txt {
+    font-weight: 600;
+    margin: 0 2rem;
+    color: var(--myblue);
+}
+
+.menu_txt:hover {
+    color: var(--myred);
+}
+
+.icon {
+    display: flex;
+    justify-content: end;
+}
+
+.icon a i {
+    font-size: 1.2rem;
+    color: var(--myblue);
+}
+
+.icon a i:hover {
+    color: var(--myred);
+}
+
+.icon a:first-child {
+    margin-right: 10px;
+}

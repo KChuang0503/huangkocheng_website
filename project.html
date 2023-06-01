@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="img/favicon.ico" rel="shortcut icon" />
     <title>HUANGKOCHENG 黃科澄</title>
-
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,10 +25,9 @@
     <!-- reset -->
     <link rel="stylesheet" href="./css/reset.css">
 
-    <link rel="stylesheet" href="./css/index_css.css">
+    <link rel="stylesheet" href="./css/project_css.css">
 
     <link rel="stylesheet" href="./css/all_setup.css">
-
 </head>
 
 <body>
@@ -74,35 +71,6 @@
     </nav>
 
     <main>
-        <!-- 首頁 -->
-        <div class="home_page">
-            <div class="home_background"></div>
-            <div class="home_content">
-                <img src="./img/name.svg" class="home_name" alt="">
-            </div>
-            <div class="field">
-                <div id="scroll_mouse" class="mouse"></div>
-            </div>
-        </div>
-
-        <!-- 自我介紹 -->
-        <div class="about_me">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 photo">
-                        <img src="" alt="">
-                    </div>
-                    <div class="col-12 about_content">
-                        <h1>ABOUT ME</h1>
-                        <p>我是黃科澄，畢業於大葉大學視覺傳達設計學系，專攻影視方面科系。儘管我個性內向，但我對設計非常熱情且努力學習相關技能。我曾在MTV電視網實習，並報名參加了UI/UX設計師就業養成班，學習如何設計使用者友好的網站介面。我期待將所學應用到實際工作中，成為一名出色的網頁設計師。
-                        </p>
-                        <a href="">
-                            <span class="view_more">MORE</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="project">
             <div class="container">
                 <div class="row">
@@ -169,10 +137,6 @@
                 </div>
             </div>
         </div>
-
-        <button onclick="topFunction()" id="myBtn" title="Go to top">
-            <h1><i class="fa-solid fa-angle-up fa-lg"></i></h1>
-        </button>
     </main>
 
     <footer>
@@ -187,46 +151,5 @@
         </div>
     </footer>
 </body>
-
-<!-- bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-
-<script>
-    window.addEventListener("scroll", function () {
-        var object = document.getElementById("scroll_mouse");
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > 0) {
-            /* 滚动到页面顶部以下时逐渐隐藏物件 */
-            object.style.opacity = "0";
-        } else {
-            /* 滚动回页面顶部时逐渐显示物件 */
-            object.style.opacity = "1";
-        }
-    });
-</script>
-
-<script>
-    // Get the button:
-    let mybutton = document.getElementById("myBtn");
-
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-</script>
 
 </html>

@@ -1,0 +1,87 @@
+.project {
+    width: 100%;
+    background-color: var(--myyellow);
+}
+
+.project_container {
+    padding: 60px 0;
+}
+
+.project_container h1 {
+    color: var(--myblack);
+    margin-bottom: 60px;
+}
+
+.design,
+.photography,
+.film {
+    position: relative;
+    display: flex;
+    height: 50vh;
+    padding: 30px 0;
+    border-bottom: 3px solid var(--myblue);
+}
+
+.design {
+    border-top: 3px solid var(--myblue);
+}
+
+.film {
+    border-bottom: 3px solid var(--myblue);
+}
+
+.project_content .project_title {
+    height: 100%;
+    float: left;
+    line-height: 100%;
+    z-index: 1;
+}
+
+.project_content .project_title h1 {
+    color: var(--myblue);
+}
+
+.project_content .view_more_container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.project_content .view_more_container a {
+    font-weight: 500;
+}
+
+.project_content .project_img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.project_content .view_more {
+    color: var(--myblack);
+    text-decoration: solid;
+    box-shadow: 0 2px rgba(0, 0, 0, 0);
+    padding-bottom: 5px;
+}
+
+.project_content .view_more:hover {
+    box-shadow: 0 2px var(--myblack);
+    padding-bottom: 5px;
+}
+
+/* footer */
+.footer {
+    /* padding: 60px 30px; */
+    background-color: var(--myblue);
+}
+
+.personal {
+    padding: 60px 0;
+}
+
+.personal h3 {
+    color: var(--myyellow);
+    line-height: 2rem;
+}
