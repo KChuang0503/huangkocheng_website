@@ -37,51 +37,8 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: calc(100vh - 80px);
+    top: calc(100vh - 50px);
     z-index: 3;
-}
-
-#scroll_mouse {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.mouse {
-    width: 40px;
-    height: 80px;
-    border: 3px solid var(--myblue);
-    border-radius: 60px;
-    position: absolute;
-    z-index: 99;
-}
-
-.mouse::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--myblue);
-    border-radius: 50%;
-    opacity: 1;
-    animation: wheel 2s infinite;
-    -webkit-animation: wheel 2s infinite;
-}
-
-@keyframes wheel {
-    to {
-        opacity: 0;
-        top: 60px;
-    }
-}
-
-@-webkit-keyframes wheel {
-    to {
-        opacity: 0;
-        top: 60px;
-    }
 }
 
 /* about_me */
@@ -116,94 +73,6 @@
 .about_content .view_more:hover {
     box-shadow: 0 2px var(--myblack);
     padding-bottom: 5px;
-}
-
-/* project */
-.project {
-    width: 100%;
-    background-color: var(--myyellow);
-}
-
-.project_container {
-    padding: 60px 0;
-}
-
-.project_container h1 {
-    color: var(--myblack);
-    margin-bottom: 60px;
-}
-
-.design,
-.photography,
-.film {
-    position: relative;
-    display: flex;
-    height: 50vh;
-    padding: 30px 0;
-    border-bottom: 3px solid var(--myblue) ;
-}
-
-.design {
-    border-top: 3px solid var(--myblue);
-}
-
-.film {
-    border-bottom: 3px solid var(--myblue);
-}
-
-.project_content .project_title {
-    height: 100%;
-    float: left;
-    line-height: 100%;
-    z-index: 1;
-}
-
-.project_content .project_title h1{
-    color: var(--myblue);
-}
-
-.project_content .view_more_container {
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
-}
-
-.project_content .view_more_container a {
-    font-weight: 500;
-}
-
-.project_content .project_img {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.project_content .view_more {
-    color: var(--myblack);
-    text-decoration: solid;
-    box-shadow: 0 2px rgba(0, 0, 0, 0);
-    padding-bottom: 5px;
-}
-
-.project_content .view_more:hover {
-    box-shadow: 0 2px var(--myblack);
-    padding-bottom: 5px;
-}
-
-/* top */
-#myBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: Transparent;
-    color: var(--myred);
-    cursor: pointer;
 }
 
 /* footer */

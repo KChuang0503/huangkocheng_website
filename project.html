@@ -32,41 +32,28 @@
 
 <body>
     <nav>
-        <div class="nav">
-            <div class="col-1">
-                <div class="logo">
-                    <a href="./index.html">
-                        <img src="./img/name.svg" alt="">
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="wrapper">
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./about_me.html">About me</a>
+                </li>
+                <li>
+                    <a href="./project.html">Project</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/brianhu97031577">
+                        <i class="fa-brands fa-twitter"></i>
                     </a>
-                </div>
-            </div>
-            <div class="col menu">
-                <ul>
-                    <ui>
-                        <a href="./index.html">
-                            <h3 class="menu_txt">HOME</h3>
-                        </a>
-                    </ui>
-                    <ui>
-                        <a href="project.html">
-                            <h3 class="menu_txt">PROJECT</h3>
-                        </a>
-                    </ui>
-                    <ui>
-                        <a href="./about_me.html">
-                            <h3 class="menu_txt">ABOUT ME</h3>
-                        </a>
-                    </ui>
-                </ul>
-            </div>
-            <div class="col-1 icon">
-                <a href="https://github.com/KChuang0503">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://twitter.com/brianhu97031577">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-            </div>
+                    <a href="https://github.com/KChuang0503">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -76,59 +63,78 @@
                 <div class="row">
                     <div class="project_container">
                         <h1>PROJECT</h1>
-                        <div class="project_content">
-                            <div class="col">
-                                <div class="design">
-                                    <div class="col-3">
-                                        <div class="col project_title">
-                                            <h2>DESIGN</h2>
+
+                        <div class="navs">
+                            <div class="nav-item active" onclick="changeTab(0)">DESIGN</div>
+                            <div class="nav-item " onclick="changeTab(1)">PHOTOGRAPHY</div>
+                            <div class="nav-item" onclick="changeTab(2)">FILM</div>
+                        </div>
+
+                        <div class="tabs">
+                            <div class="tab-content active" id="design">
+                                <div class="project_content">
+                                    <div class="col">
+                                        <div class="design">
+                                            <div class="col-3">
+                                                <div class="col project_title">
+                                                    <h2>DESIGN</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="project_img">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-2 view_more_container">
+                                                <a class="view_more" href="project.html?tab=design">
+                                                    VIEW MORE
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="project_img">
-                                            <img src="./img/design.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 view_more_container">
-                                        <a class="view_more" href="">
-                                            VIEW MORE
-                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="photography">
-                                    <div class="col-3 project_title">
-                                        <h2>PHOTOGRAPHY</h2>
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="project_img">
-                                            <img src="./img/photography.jpg" alt="">
+                            <div class="tab-content" id="photography">
+                                <div class="project_content">
+                                    <div class="col">
+                                        <div class="photography">
+                                            <div class="col-3 project_title">
+                                                <h2>PHOTOGRAPHY</h2>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="project_img">
+                                                    <img src="./img/photography.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-2 view_more_container">
+                                                <a class="view_more" href="project.html?tab=photography">
+                                                    VIEW MORE
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-2 view_more_container">
-                                        <a class="view_more" href="">
-                                            VIEW MORE
-                                        </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="film">
-                                    <div class="col-3">
-                                        <div class="col project_title">
-                                            <h2>FILM</h2>
+                            <div class="tab-content" id="film">
+                                <div class="project_content">
+                                    <div class="col">
+                                        <div class="film">
+                                            <div class="col-3">
+                                                <div class="col project_title">
+                                                    <h2>FILM</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="project_img">
+                                                    <img src="./img/film.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-2 view_more_container">
+                                                <a class="view_more" href="project.html?tab=film">
+                                                    VIEW MORE
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-7">
-                                        <div class="project_img">
-                                            <img src="./img/film.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-2 view_more_container">
-                                        <a class="view_more" href="">
-                                            VIEW MORE
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -137,19 +143,56 @@
                 </div>
             </div>
         </div>
+
+
     </main>
 
     <footer>
         <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="personal">
-                        <h3>KO CHENHG HUANG <br> 黃科澄</h3>
+            <div class="container-fluid">
+                <div class="row personal">
+                    <div class="col phone">
+                        <h4>Phone</h4><br>
+                        <p>09-52611678</p>
+                    </div>
+                    <div class="col email">
+                        <h4>Email</h4><br>
+                        <p>kchuang860503@gmail.com</p>
+                    </div>
+                    <div class="col follow_me">
+                        <h4>Follow me</h4><br>
+                        <a href="https://twitter.com/brianhu97031577">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/KChuang0503">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/brianhuang0503/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="col copyright">
+                        <p> &copy; 2023 KO CHENG HUANG 黃科澄 </p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        function changeTab(index) {
+            const navItems = document.querySelectorAll('.nav-item');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            // 移除所有 active 类名
+            navItems.forEach(item => item.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // 添加 active 类名到选定的标签和内容
+            navItems[index].classList.add('active');
+            tabContents[index].classList.add('active');
+        }
+    </script>
 </body>
 
 </html>

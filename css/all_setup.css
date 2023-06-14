@@ -1,10 +1,16 @@
 :root {
-    --mywhite: #EEEDE9;
+    --mywhite: #eeede9;
     --myblack: #1a191a;
     --myblue: #0a34a2;
     --myred: #eb3f00;
-    --myyellow: #efddd1;   
+    --myyellow: #efddd1;
     font-family: "Noto Sans TC", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--myyellow);
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -38,51 +44,122 @@ h3 {
     line-height: 1.5rem;
 }
 
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
 
-/* nav */
-.nav {
+/* NAV */
+.wrapper {
     position: fixed;
     top: 0;
     left: 0;
+    height: 100%;
     width: 100%;
-    background-color: var(--myyellow);
-    border-radius: 0.5rem;
-    padding: 8px 60px;
-    display: flex;
-    align-items: center;
+    background: var(--myblack);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
     z-index: 99;
 }
-
-.menu ul,
-.icon {
-    display: flex;
-    justify-content: center;
+#active:checked ~ .wrapper {
+    clip-path: circle(75%);
 }
-
-.menu_txt {
+.menu-btn {
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--myyellow);
+    cursor: pointer;
+    background: var(--myblack);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+#active:checked ~ .menu-btn {
+    color: var(--myyellow);
+}
+#active:checked ~ .menu-btn i:before {
+    content: "\f00d";
+}
+.wrapper ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+}
+.wrapper ul li {
+    margin: 15px 0;
+}
+.wrapper ul li a {
+    margin: 0 5px;
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: var(--myyellow);
+    border-radius: 50px;
+    background: var(--myblack);
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+}
+.wrapper ul li a:after {
+    position: absolute;
+    content: "";
+    background: var(--myyellow);
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; /* if the font is 'Oswald'*/
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after {
+    transform: scaleY(1);
+}
+.wrapper ul li a:hover {
+    color: var(--myyellow);
+}
+input[type="checkbox"] {
+    display: none;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #202020;
+}
+.content .title {
+    font-size: 40px;
+    font-weight: 700;
+}
+.content p {
+    font-size: 35px;
     font-weight: 600;
-    margin: 0 2rem;
-    color: var(--myblue);
 }
 
-.menu_txt:hover {
-    color: var(--myred);
-}
-
-.icon {
-    display: flex;
-    justify-content: end;
-}
-
-.icon a i {
-    font-size: 1.2rem;
-    color: var(--myblue);
-}
-
-.icon a i:hover {
-    color: var(--myred);
-}
-
-.icon a:first-child {
-    margin-right: 10px;
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }

@@ -8,8 +8,30 @@
 }
 
 .project_container h1 {
+    margin-top: 60px;
     color: var(--myblack);
     margin-bottom: 60px;
+}
+
+.navs {
+    display: flex;
+}
+
+.nav-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    text-decoration: underline;
+}
+
+.tabs .tab-content {
+    display: none;
+}
+
+.tabs .tab-content.active {
+    display: block;
 }
 
 .design,
@@ -30,58 +52,37 @@
     border-bottom: 3px solid var(--myblue);
 }
 
-.project_content .project_title {
-    height: 100%;
-    float: left;
-    line-height: 100%;
-    z-index: 1;
-}
-
 .project_content .project_title h1 {
     color: var(--myblue);
 }
 
-.project_content .view_more_container {
-    display: flex;
-    justify-content: end;
-    align-items: flex-end;
-}
-
-.project_content .view_more_container a {
-    font-weight: 500;
-}
-
-.project_content .project_img {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.project_content .view_more {
-    color: var(--myblack);
-    text-decoration: solid;
-    box-shadow: 0 2px rgba(0, 0, 0, 0);
-    padding-bottom: 5px;
-}
-
-.project_content .view_more:hover {
-    box-shadow: 0 2px var(--myblack);
-    padding-bottom: 5px;
+.project_content .view_more i {
+    font-size: 24px;
 }
 
 /* footer */
 .footer {
-    /* padding: 60px 30px; */
     background-color: var(--myblue);
 }
 
 .personal {
+    display: flex;
+    align-items: flex-end;
     padding: 60px 0;
 }
 
-.personal h3 {
+.personal h4,
+.personal p,
+.personal i {
     color: var(--myyellow);
-    line-height: 2rem;
+}
+
+.personal i.fa-twitter,
+.personal i.fa-github {
+    margin-right: 10px;
+}
+
+.personal .copyright {
+    display: flex;
+    justify-content: center;
 }
