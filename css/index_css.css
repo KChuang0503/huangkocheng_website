@@ -74,18 +74,3 @@
     box-shadow: 0 2px var(--myblack);
     padding-bottom: 5px;
 }
-
-/* footer */
-.footer {
-    /* padding: 60px 30px; */
-    background-color: var(--myblue);
-}
-
-.personal {
-    padding: 60px 0;
-}
-
-.personal h3 {
-    color: var(--myyellow);
-    line-height: 2rem;
-}

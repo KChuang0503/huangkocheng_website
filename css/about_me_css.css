@@ -1,0 +1,56 @@
+/* about_me */
+.about_me {
+    width: 100%;
+    padding: 20px 0 120px;
+    background-color: var(--myyellow);
+}
+
+.about_content {
+    padding: 50px 0;
+}
+
+.about_content .introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.about_content h1 {
+    color: var(--myblack);
+    margin-bottom: 48px;
+}
+
+.my_photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.introduce h4 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.link a {
+    font-size: 20px;
+    color: var(--myblack);
+}
+
+.link a:nth-child(-n + 2) {
+    margin-right: 24px;
+}
+
+.introduce p {
+    line-height: 1.3rem;
+}
+
+/* timeline */

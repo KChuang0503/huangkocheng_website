@@ -163,3 +163,30 @@ input[type="checkbox"] {
         filter: hue-rotate(360deg);
     }
 }
+
+/* footer */
+.footer {
+    background-color: var(--myblue);
+}
+
+.personal {
+    display: flex;
+    align-items: flex-end;
+    padding: 60px 0;
+}
+
+.personal h4,
+.personal p,
+.personal i {
+    color: var(--myyellow);
+}
+
+.personal i.fa-twitter,
+.personal i.fa-github {
+    margin-right: 10px;
+}
+
+.personal .copyright {
+    display: flex;
+    justify-content: center;
+}
