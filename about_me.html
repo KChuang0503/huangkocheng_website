@@ -62,58 +62,56 @@
 
     <main>
         <div class="about_me_header">
-            <div class="col">
-                <div class="about_me_name">
-                    <h1>HUANG KO CHENG <br> 黃科澄</h1>
-                </div>
+            <div class="my_photo">
+                <img src="./img/home_myphoto.jpg" alt="">
             </div>
-            <div class="col">
-                <div class="my_photo">
-                    <img src="./img/home_myphoto.jpg" alt="">
+            <div class="about_me_name">
+                <h1>HUANG KO CHENG <br> 黃科澄</h1>
+                <div class="work">
+                    <h4>PHOTOGRAPHER</h4>
+                    <h4>UI/UX DESIGNER</h4>
                 </div>
+                <p>我是黃科澄，畢業於大葉大學視覺傳達設計學系，專攻影視方面科系。儘管我個性內向，但我對設計非常熱情且努力學習相關技能。我曾在MTV電視網實習，並報名參加了UI/UX設計師就業養成班，學習如何設計使用者友好的網站介面。我期待將所學應用到實際工作中，成為一名出色的網頁設計師。
+                </p>
             </div>
         </div>
 
-        <div class="about_me">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 about_content">
-                        <div class="introduce">
-
-
-                            <div class="about_me_main">
-                                <div class="row">
-                                    <div class="col about_me_">
-                                        <p>我是黃科澄，畢業於大葉大學視覺傳達設計學系，專攻影視方面科系。儘管我個性內向，但我對設計非常熱情且努力學習相關技能。我曾在MTV電視網實習，並報名參加了UI/UX設計師就業養成班，學習如何設計使用者友好的網站介面。我期待將所學應用到實際工作中，成為一名出色的網頁設計師。
-                                        </p>
-                                    </div>
-                                    <div class="col about_me_contacts">
-                                        <div class="detal">
-                                            <h3>Contacts</h3>
-                                            <p>Phone: 0952611678</p>
-                                            <p>Email: kchuang860503@gmail.com</p>
-
-                                        </div>
-                                        <div class="link">
-                                            <a href="https://twitter.com/brianhu97031577">
-                                                <i class="fa-brands fa-twitter"></i>
-                                            </a>
-                                            <a href="https://github.com/KChuang0503">
-                                                <i class="fa-brands fa-github"></i>
-                                            </a>
-                                            <a href="https://www.linkedin.com/in/brianhuang0503/">
-                                                <i class="fa-brands fa-linkedin"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div>
+                        <time>2015 ~ 2021 大葉大學 視覺傳達設計學系</time>
+                        <P>
+                            大學期間學習相關於影視方面的知識，在學習的過程中我們最注重的就是團隊之間的分工，在這一個團隊之中我是負責後期剪輯，在社團方面參加過滑板社、幫助系學會影片相關事情，畢業製作負責影片製作和前期的音樂編輯。製作唱片專輯，從前期的音樂製作、平面設計，到後期的影像製作與包裝設計，全程我與我的組員一起共同製作，我們想要透過音樂創作去講述我們在大學四年中所歷經的內心改變。就讀中進入MTV電視網實習，實習的過程中我是負責影片整理毛片與初剪，在實習的過程中讓我更加的聊解相關知識。
+                        </P>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2020 MTV電視網實習</time>
+                        <p>
+                            在MTV電視網實習，工作內容是在影片剪輯領域。我的工作涵蓋製作YOUTUBE頻道的封面設計，並參與剪輯工作。在這一次的實習機會中讓我有機會運用我的技術，為YOUTUBE頻道設計出引人注目的視覺效果。同時，我在剪輯影片中也獲得了相關的經驗和技能。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2021 服兵役</time>
+                        <p>
+                            當了四個月的兵，在這段時間裡，我接受了軍事訓練，培養了紀律性和責任感。同時，我也通過中間空閒的時間，自學努力提升自己，掌握了新知識和技能。讓我在這段經歷讓我更堅強、更有決心，為未來的挑戰做好準備。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2021 資展國際互動式網站U I / U X 設計師就業養成班</time>
+                        <P>
+                            在資展國際互動式網站U I / U X 設計師就業養成班中學到了很多有關於網頁設計相關的知識，在過程中有學到 HTML、CSS3、JS、JQuiery、UIUX基礎概論、Bosstrap、Figma、php、MySQL等等相關知識。
+                        </P>
+                    </div>
+                </li>
+            </ul>
         </div>
-
     </main>
 
     <footer>
@@ -148,6 +146,40 @@
         </div>
     </footer>
 </body>
+<script>
+    (function () {
+        "use strict";
 
+        // define variables
+        var items = document.querySelectorAll(".timeline li");
+
+        // check if an element is in viewport
+        // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isElementInViewport(items[i])) {
+                    items[i].classList.add("in-view");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+    })();
+
+</script>
 
 </html>
