@@ -25,9 +25,12 @@
     <!-- reset -->
     <link rel="stylesheet" href="./css/reset.css">
 
+    <link rel="stylesheet" href="./css/all_setup.css">
+
     <link rel="stylesheet" href="./css/project_css.css">
 
-    <link rel="stylesheet" href="./css/all_setup.css">
+    <!-- lightbox css -->
+    <link rel="stylesheet" href="./css/lightbox.css">
 </head>
 
 <body>
@@ -61,93 +64,102 @@
     </nav>
 
     <main>
-        <div class="project">
-            <div class="container">
-                <div class="row">
-                    <div class="project_container">
-                        <h1>PROJECT</h1>
+        <div class="project_header">
 
-                        <div class="navs">
-                            <div class="nav-item active" onclick="changeTab(0)">DESIGN</div>
-                            <div class="nav-item " onclick="changeTab(1)">PHOTOGRAPHY</div>
-                            <div class="nav-item" onclick="changeTab(2)">FILM</div>
+        </div>
+        <div class="container-fluid">
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+                <label for="tab1">PHOTO</label>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+                <label for="tab2">VIDEO</label>
+                <!-- Tab 3 -->
+                <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+                <label for="tab3">DESIGN</label>
+
+                <div class="tab-panels">
+                    <section id="photo" class="tab-panel">
+                        <h2 class="text-center">PHOTO</h2>
+                        <div class="lightbox-gallery">
+                            <div>
+                                <a href="./img/project/photo/photo_1.JPG" data-lightbox="mingchi" data-title="明池森林遊樂區">
+                                    <img src="./img/project/photo/photo_1.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_2.JPG" data-lightbox="mingchi" data-title="明池森林遊樂區">
+                                    <img src="./img/project/photo/photo_2.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_3.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_3.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_4.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_4.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_5.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_5.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_6.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_6.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_7.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_7.JPG" alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <a href="../img/project/photo/photo_8.JPG" data-lightbox="uk" data-title="英國">
+                                    <img src="./img/project/photo/photo_8.JPG" alt="">
+                                </a>
+                            </div>
+                            
                         </div>
+                    </section>
 
-                        <div class="tabs">
-                            <div class="tab-content active" id="design">
-                                <div class="project_content">
-                                    <div class="col">
-                                        <div class="design">
-                                            <div class="col-3">
-                                                <div class="col project_title">
-                                                    <h2>DESIGN</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="project_img">
+                    <section id="video" class="tab-panel">
+                        <h2>VIDEO</h2>
+                        <p><strong>Overall Impression:</strong> An elegant, malty German amber lager with a balanced,
+                            complementary beechwood smoke character. Toasty-rich malt in aroma and flavor, restrained
+                            bitterness, low to high smoke flavor, clean fermentation profile, and an attenuated finish
+                            are
+                            characteristic.</p>
+                        <p><strong>History:</strong> A historical specialty of the city of Bamberg, in the Franconian
+                            region
+                            of Bavaria in Germany. Beechwood-smoked malt is used to make a Märzen-style amber lager. The
+                            smoke character of the malt varies by maltster; some breweries produce their own smoked malt
+                            (rauchmalz).</p>
+                    </section>
 
-                                                </div>
-                                            </div>
-                                            <div class="col-2 view_more_container">
-                                                <a class="view_more" href="project.html?tab=design">
-                                                    VIEW MORE
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content" id="photography">
-                                <div class="project_content">
-                                    <div class="col">
-                                        <div class="photography">
-                                            <div class="col-3 project_title">
-                                                <h2>PHOTOGRAPHY</h2>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="project_img">
-                                                    <img src="./img/photography.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-2 view_more_container">
-                                                <a class="view_more" href="project.html?tab=photography">
-                                                    VIEW MORE
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-content" id="film">
-                                <div class="project_content">
-                                    <div class="col">
-                                        <div class="film">
-                                            <div class="col-3">
-                                                <div class="col project_title">
-                                                    <h2>FILM</h2>
-                                                </div>
-                                            </div>
-                                            <div class="col-7">
-                                                <div class="project_img">
-                                                    <img src="./img/film.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-2 view_more_container">
-                                                <a class="view_more" href="project.html?tab=film">
-                                                    VIEW MORE
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <section id="design" class="tab-panel">
+                        <h2>DESIGN</h2>
+                        <p><strong>Overall Impression:</strong> A dark, strong, malty German lager beer that emphasizes
+                            the
+                            malty-rich and somewhat toasty qualities of continental malts without being sweet in the
+                            finish.
+                        </p>
+                        <p><strong>History:</strong> Originated in the Northern German city of Einbeck, which was a
+                            brewing
+                            center and popular exporter in the days of the Hanseatic League (14th to 17th century).
+                            Recreated in Munich starting in the 17th century. The name “bock” is based on a corruption
+                            of
+                            the name “Einbeck” in the Bavarian dialect, and was thus only used after the beer came to
+                            Munich. “Bock” also means “Ram” in German, and is often used in logos and advertisements.
+                        </p>
+                    </section>
                 </div>
             </div>
         </div>
-
-
     </main>
 
     <footer>
@@ -181,6 +193,14 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
+    </script>
 </body>
 
 </html>

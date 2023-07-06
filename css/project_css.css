@@ -1,62 +1,116 @@
-.project {
-    width: 100%;
-    background-color: var(--myyellow);
+.tabset {
+    margin: 150px 0 0 0;
 }
 
-.project_container {
-    padding: 60px 0;
+.tabset > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
 }
 
-.project_container h1 {
-    margin-top: 60px;
-    color: var(--myblack);
-    margin-bottom: 60px;
-}
-
-.navs {
-    display: flex;
-}
-
-.nav-item {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.nav-item.active {
-    text-decoration: underline;
-}
-
-.tabs .tab-content {
+.tabset .tab-panel {
     display: none;
 }
 
-.tabs .tab-content.active {
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
     display: block;
 }
 
-.design,
-.photography,
-.film {
+.tabset > label {
     position: relative;
-    display: flex;
-    height: 50vh;
-    padding: 30px 0;
-    border-bottom: 3px solid var(--myblue);
+    display: inline-block;
+    padding: 15px 15px 25px;
+    border: 1px solid transparent;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.design {
-    border-top: 3px solid var(--myblue);
+.tabset > label::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    width: 22px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--myblack);
 }
 
-.film {
-    border-bottom: 3px solid var(--myblue);
+input:focus-visible + label {
+    outline: 2px solid var(--myblue);
+    border-radius: 3px;
 }
 
-.project_content .project_title h1 {
+.tabset > label:hover,
+.tabset > input:focus + label,
+.tabset > input:checked + label {
     color: var(--myblue);
 }
 
-.project_content .view_more i {
-    font-size: 24px;
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+    background: var(--myblue);
 }
 
+.tabset > input:checked + label {
+    border-color: var(--myblack);
+    border-bottom: 1px solid;
+    margin-bottom: -1px;
+}
+
+.tab-panel {
+    padding: 30px 0;
+    border-top: 1px solid var(--myblack);
+}
+
+/* photo */
+#photo > h2 {
+    margin-bottom: 15px;
+}
+/* lightbox */
+.lightbox-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lightbox-gallery div {
+    width: 20%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.lightbox-gallery div > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.lightbox-gallery div > a > img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 480px) {
+    .lightbox-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lightbox > div {
+        margin-bottom: 10px;
+    }
+}
