@@ -40,37 +40,3 @@
     top: calc(100vh - 50px);
     z-index: 3;
 }
-
-/* about_me */
-.about_me {
-    width: 100%;
-    padding: 20px 0 120px;
-    background-color: var(--myyellow);
-}
-
-.about_content {
-    padding: 50px 0;
-}
-
-.about_content h1 {
-    margin-bottom: 60px;
-    color: var(--myblack);
-}
-
-.about_content p {
-    line-height: 1.5rem;
-    color: var(--myblack);
-}
-
-.about_content .view_more {
-    color: var(--myblack);
-    float: right;
-    text-decoration: solid;
-    box-shadow: 0 2px rgba(0, 0, 0, 0);
-    padding-bottom: 5px;
-}
-
-.about_content .view_more:hover {
-    box-shadow: 0 2px var(--myblack);
-    padding-bottom: 5px;
-}

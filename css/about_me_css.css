@@ -63,13 +63,13 @@ img {
 .timeline ul li {
     list-style-type: none;
     position: relative;
-    width: 8px;
+    width: 2px;
     margin: 0 auto;
     padding-top: 50px;
     background: var(--myblack);
 }
 
-.timeline ul li::after {
+/* .timeline ul li::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -80,14 +80,13 @@ img {
     border-radius: 50%;
     background: inherit;
     z-index: 1;
-}
+} */
 
 .timeline ul li div {
     position: relative;
     bottom: 0;
     width: 400px;
     padding: 15px;
-    background: var(--myblue);
     border-radius: 12px;
 }
 
@@ -120,18 +119,25 @@ img {
     border-color: transparent transparent transparent #f45b69;
 }
 
+.timeline strong {
+    display: block;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
 time {
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 8px;
-    color: var(--myyellow);
+    color: var(--myblack);
 }
 
 .timeline p {
     display: block;
     margin-bottom: 8px;
-    color: var(--myyellow);
+    color: var(--myblack);
     line-height: 1.5rem;
 }
 

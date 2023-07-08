@@ -1,5 +1,5 @@
 .tabset {
-    margin: 150px 0 0 0;
+    margin: 80px 0 0 0;
 }
 
 .tabset > input[type="radio"] {
@@ -24,8 +24,6 @@
     position: relative;
     display: inline-block;
     padding: 15px 15px 25px;
-    border: 1px solid transparent;
-    border-radius: 12px 12px 0 0;
     border-bottom: 0;
     cursor: pointer;
     font-weight: 600;
@@ -61,17 +59,17 @@ input:focus-visible + label {
 
 .tabset > input:checked + label {
     border-color: var(--myblack);
-    border-bottom: 1px solid;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
 }
 
 .tab-panel {
     padding: 30px 0;
-    border-top: 1px solid var(--myblack);
+    border-top: 2px solid var(--myblack);
 }
 
-/* photo */
-#photo > h2 {
+/* photo 頁面 */
+.tab-panels > section > h2 {
+    text-align: center;
     margin-bottom: 15px;
 }
 /* lightbox */
@@ -86,8 +84,8 @@ input:focus-visible + label {
     width: 20%;
     aspect-ratio: 1/1;
     overflow: hidden;
-    border-radius: 12px;
-    margin: 10px;
+    /* border-radius: 50%; */
+    margin: 20px;
 }
 
 .lightbox-gallery div > a {
@@ -102,7 +100,13 @@ input:focus-visible + label {
     height: auto; 
     display: block;
     object-fit: cover;
+    opacity: .8;
 }
+
+.lightbox-gallery div > a > img:hover {
+    opacity: 1;
+    transition: 0.5s;
+} 
 
 @media only screen and (max-width: 480px) {
     .lightbox-gallery {
@@ -113,4 +117,19 @@ input:focus-visible + label {
     .lightbox > div {
         margin-bottom: 10px;
     }
+}
+
+/* video 頁面 */
+.video_container > div {
+    border-bottom: 2px solid var(--myblack);
+    padding: 15px 0;
+}
+
+.video_img {
+    /* height: 100px; */
+    aspect-ratio: 16/7;
+}
+
+.video_img img {
+    width: 100%;
 }
