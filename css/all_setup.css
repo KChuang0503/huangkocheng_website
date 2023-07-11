@@ -17,10 +17,19 @@ body {
 @font-face {
     font-family: Rosellinda;
     src: url(../font/Rosellinda\ Alyamore.otf);
+    
+}
+
+/* 數字專用字型 */
+@font-face {
+    font-family: Mavera;
+    src: url(../font/Mavera\ Demo-Brush.ttf);
+    
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 h1 {

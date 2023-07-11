@@ -26,6 +26,7 @@
     padding: 15px 15px 25px;
     border-bottom: 0;
     cursor: pointer;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -63,7 +64,7 @@ input:focus-visible + label {
 }
 
 .tab-panel {
-    padding: 30px 0;
+    padding: 0 0 30px 0;
     border-top: 2px solid var(--myblack);
 }
 
@@ -97,16 +98,16 @@ input:focus-visible + label {
 
 .lightbox-gallery div > a > img {
     width: 100%;
-    height: auto; 
+    height: auto;
     display: block;
     object-fit: cover;
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .lightbox-gallery div > a > img:hover {
     opacity: 1;
     transition: 0.5s;
-} 
+}
 
 @media only screen and (max-width: 480px) {
     .lightbox-gallery {
@@ -119,17 +120,93 @@ input:focus-visible + label {
     }
 }
 
-/* video 頁面 */
-.video_container > div {
-    border-bottom: 2px solid var(--myblack);
-    padding: 15px 0;
+/* video 頁面與 design 頁面*/
+.video_container,
+.design_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.video_img {
-    /* height: 100px; */
-    aspect-ratio: 16/7;
+.video_container > div,
+.design_container > div {
+    padding: 0 50px;
 }
 
-.video_img img {
+.video_tite .number,
+.design_tite .number {
+    font-family: Mavera;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    margin-bottom: 200px;
+    color: var(--myred);
+}
+
+.video_tite > h4,
+.design_tite > h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.video_tite > span,
+.design_tite > span {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.video_img,
+.design_img {
     width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.video_img img,
+.design_img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#video_hover1,
+#video_hover2,
+#video_hover3,
+#design_hover1,
+#design_hover2,
+#design_hover3 {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 15px;
+    color: var(--myyellow);
+    border-radius: 30px;
+    background: var(--myblack);
+    opacity: 0; /* 初始隱藏 */
+    transition: opacity 0.2s;
+}
+
+#video_hover1 p,
+#video_hover2 p,
+#video_hover3 p,
+#design_hover1 p,
+#design_hover2 p,
+#design_hover3 p {
+    margin-right: 8px;
+}
+
+.video_container > div > a:hover #video_hover1,
+.video_container > div > a:hover #video_hover2,
+.video_container > div > a:hover #video_hover3,
+.design_container > div > a:hover #design_hover1,
+.design_container > div > a:hover #design_hover2,
+.design_container > div > a:hover #design_hover3 {
+    opacity: 1;
 }

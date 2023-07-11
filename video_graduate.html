@@ -61,8 +61,27 @@
     </nav>
 
     <main>
-        
+
+        <div style="border: 1px solid red;height: 1000px;">
+
+            <div class="hover" style="border: 1px solid red;width: 500px; height: 1000px;">
+                <div id="hover">
+                    123
+                </div>
+            </div>
+        </div>
+
+
     </main>
+
+    <script>
+        let hoverbox = document.getElementById("hover");
+        document.addEventListener("mousemove", function (e) {
+
+            hoverbox.style.left = e.pageX + 10 + "px";
+            hoverbox.style.top = e.pageY - window.scrollY + 10 + "px";
+        });
+    </script>
 </body>
 
 </html>
