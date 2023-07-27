@@ -6,6 +6,8 @@
     --myyellow: #efddd1;
     font-family: "Noto Sans TC", sans-serif;
     box-sizing: border-box;
+
+    --timing: ease;
 }
 
 body {
@@ -17,14 +19,12 @@ body {
 @font-face {
     font-family: Rosellinda;
     src: url(../font/Rosellinda\ Alyamore.otf);
-    
 }
 
 /* 數字專用字型 */
 @font-face {
     font-family: Mavera;
     src: url(../font/Mavera\ Demo-Brush.ttf);
-    
 }
 
 a {
@@ -54,6 +54,50 @@ h4 {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2rem;
+}
+
+/* 隱藏原生 scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.scrollBar2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0%;
+    width: 10px;
+    background: var(--myred);
+    transition: height 200ms var(--timing);
+    text-align: right;
+    color: var(--myred);
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 5px 5px ;
+    z-index: 99;
+}
+
+.scrollBar2 span {
+    position: absolute;
+    bottom: 20px;
+    left: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align: left;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom left;
+}
+.scrollBar2 span::after {
+    content: "%";
+    font-size: 0.8em;
+    position: absolute;
+    right: -15px;
+    bottom: 5px;
+    font-weight: 700;
+    opacity: 0.4;
 }
 
 /* NAV */

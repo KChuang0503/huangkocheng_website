@@ -65,7 +65,6 @@ input:focus-visible + label {
 
 .tab-panel {
     padding: 0 0 30px 0;
-    border-top: 2px solid var(--myblack);
 }
 
 /* photo 頁面 */
