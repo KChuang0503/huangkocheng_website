@@ -11,6 +11,6 @@ Hi, I'm Brian Huang welcome to my personal website!
 
 ## 🛠️ 技術架構
 
-- **Frontend 前端**: HTML5, CSS3, JavaScript, Bootstrap
-- **UI/UX Tools UI/IX 工具**: Photoshop
-- **Others 其他**: Git, GitHub Pages
+- 前端: HTML5, CSS3, JavaScript, Bootstrap
+- UI/IX 工具: Photoshop
+- 其他: Git, GitHub Pages
